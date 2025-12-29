@@ -59,19 +59,20 @@ const displayTimeframe = (data, timeframe) => {
         const row1 = createEl('div', 'time__activity-row-1');
         const heading = createEl('h2', 'time__activity-type', title);
 
-        const menuBtn = createEl('button', 'time__activity-menu');
-        menuBtn.setAttribute('aria-label', 'Open activity menu');
-        menuBtn.innerHTML = MENU_SVG;
-
-        row1.append(heading, menuBtn);
-
-        // Row 2
-        const row2 = createEl('div', 'time__activity-row-2');
         const hours = createEl(
             'p',
             'time__activity-hours',
             `${timeframes[timeframe].current}hrs`
         );
+
+        row1.append(heading, hours);
+
+        // Row 2
+        const row2 = createEl('div', 'time__activity-row-2');
+
+        const menuBtn = createEl('button', 'time__activity-menu');
+        menuBtn.setAttribute('aria-label', 'Open activity menu');
+        menuBtn.innerHTML = MENU_SVG;
 
         const previous = createEl(
             'p',
@@ -79,7 +80,7 @@ const displayTimeframe = (data, timeframe) => {
             `${label} - ${timeframes[timeframe].previous}hrs`
         );
 
-        row2.append(hours, previous);
+        row2.append(menuBtn, previous);
 
         info.append(row1, row2);
         section.appendChild(info);
