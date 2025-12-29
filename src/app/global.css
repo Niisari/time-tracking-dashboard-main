@@ -30,3 +30,104 @@
   font-weight: 500;
   src: url('../fonts/rubik-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+:root {
+  /* Primary Colors */
+  --Purple-600: hsl(246, 80%, 60%);
+
+  --Orange-300: hsl(15, 100%, 70%);
+  --Blue-300: hsl(195, 74%, 62%);
+  --Pink-400: hsl(348, 100%, 68%);
+  --Green-400: hsl(145, 58%, 55%);
+  --Purple-700: hsl(264, 64%, 52%);
+  --Yellow-300: hsl(43, 84%, 65%);
+
+/* Neutral Colors */
+
+ --Navy-950: hsl(226, 43%, 10%);
+ --Navy-900: hsl(235, 46%, 20%);
+ --Purple-500: hsl(235, 45%, 61%);
+ --Navy-200: hsl(236, 100%, 87%);
+}
+
+/* General Typography */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--Navy-950);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.time__dashboard {
+  padding: 3rem 1rem;
+}
+
+.time__dashboard, 
+.time__body {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1rem;
+}
+
+.profile__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__wrapper{
+  display: flex;
+  align-items: center;
+
+  padding: 1.5rem;
+  gap: 1rem;
+
+  background-color: var(--Purple-600);
+  border-radius: 0.75rem;
+}
+
+.profile__name {
+  color: var(--Navy-200);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.profile__text {
+  color: var(--Purple-500);
+  font-weight: 300;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.profile__timeframe {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 1rem 0;
+
+  background-color: var(--Navy-900);
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.btn__timeframe {
+  color: var(--Purple-500);
+  font-weight: 300;
+  transition: color 0.3s ease-in-out;
+}
+
+.time__activity {
+  background-color: var(--Navy-900);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.time__activity-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
