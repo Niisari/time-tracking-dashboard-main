@@ -96,6 +96,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.75rem;
 }
 
+.profile__image {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
 .profile__name {
   color: var(--Navy-200);
   font-weight: 300;
