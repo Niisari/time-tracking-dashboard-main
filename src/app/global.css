@@ -12,7 +12,7 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/rubik-v31-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../app/assets/fonts/rubik-v31-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* rubik-regular - latin */
 @font-face {
@@ -20,7 +20,7 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/rubik-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../app/assets/fonts/rubik-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* rubik-500 - latin */
 @font-face {
@@ -28,7 +28,7 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/rubik-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../app/assets/fonts/rubik-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 :root {
@@ -54,12 +54,18 @@
 body {
   font-family: 'Rubik', sans-serif;
   background-color: var(--Navy-950);
+
+  min-height: 100vh;
 }
 
 button {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.125rem;
 }
 
 .time__dashboard {
@@ -71,7 +77,7 @@ button {
   display: grid;
   grid-template-columns: 1fr;
 
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .profile__section {
@@ -92,14 +98,13 @@ button {
 
 .profile__name {
   color: var(--Navy-200);
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .profile__text {
-  color: var(--Purple-500);
+  color: var(--Navy-200);
   font-weight: 300;
-  font-size: 0.875rem;
   margin-bottom: 0.25rem;
 }
 
@@ -124,10 +129,109 @@ button {
   background-color: var(--Navy-900);
   border-radius: 0.75rem;
   padding: 1.5rem;
+
+  position: relative;
 }
 
 .time__activity-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.time__activity-type {
+  color: var(--Navy-200);
+  font-weight: 500;
+}
+
+.time__activity-hours {
+  color: var(--Navy-200);
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.time__activity-row-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.time__activity-menu svg path {
+  fill: var(--Navy-200);
+}
+
+.time__activity-previous {
+  color: var(--Navy-200);
+  font-weight: 300;
+
+  margin-top: 1rem;
+}
+
+.time__activity--work::before,
+.time__activity--play::before,
+.time__activity--study::before,
+.time__activity--exercise::before,
+.time__activity--social::before,
+.time__activity--self-care::before {
+  content: '';
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+
+  width: 100%;
+  height: 60px;
+  border-radius: 0.75rem;
+  z-index: -1;
+}
+
+.time__activity--work::before {
+  background-color: var(--Orange-300);
+}
+.time__activity--play::before {
+  background-color: var(--Blue-300);
+}
+.time__activity--study::before {
+  background-color: var(--Pink-400);
+}
+.time__activity--exercise::before {
+  background-color: var(--Green-400);
+}
+.time__activity--social::before {
+  background-color: var(--Purple-700);
+}
+.time__activity--self-care::before {
+  background-color: var(--Yellow-300);
+}
+
+.time__activity--work::after,
+.time__activity--play::after,
+.time__activity--study::after,
+.time__activity--exercise::after,
+.time__activity--social::after,
+.time__activity--self-care::after {
+  position: absolute;
+  top: -2.5rem;
+  right: 1.5rem;
+  z-index: -1;
+}
+
+.time__activity--work::after {
+  content: url('../app/assets/images/icon-work.svg');
+}
+.time__activity--play::after {
+  content: url('../app/assets/images/icon-play.svg');
+}
+.time__activity--study::after {
+  content: url('../app/assets/images/icon-study.svg');
+}
+.time__activity--exercise::after {
+  content: url('../app/assets/images/icon-exercise.svg');
+}
+.time__activity--social::after {
+  content: url('../app/assets/images/icon-social.svg');
+}
+.time__activity--self-care::after {
+  content: url('../app/assets/images/icon-self-care.svg');
 }
