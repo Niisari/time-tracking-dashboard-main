@@ -88,9 +88,11 @@ h1, h2, h3, h4, h5, h6 {
 .profile__wrapper{
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  padding: 1.5rem;
-  gap: 1rem;
+
+  padding: 2rem 1.5rem;
+  gap: 1.25rem;
 
   background-color: var(--Purple-600);
   border-radius: 0.75rem;
