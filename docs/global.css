@@ -149,12 +149,24 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.3s ease-in-out;
 }
 
+.btn__timeframe:hover,
+.btn__timeframe:focus,
+.btn__timeframe--active {
+  color: var(--Navy-200);
+}
+
 .time__activity {
   background-color: var(--Navy-900);
   border-radius: 0.75rem;
   padding: 1.5rem;
 
   position: relative;
+}
+
+
+.time__activity-menu:hover svg path,
+.time__activity-menu:focus svg path {
+  filter: brightness(120%);
 }
 
 .time__activity-info {
