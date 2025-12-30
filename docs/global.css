@@ -273,6 +273,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Desktop - Laptop */
 @media (min-width: 62rem) {
+  body {
+    overflow: hidden;
+  }
+
   .time__dashboard,
   .time__body {
     grid-template-columns: repeat(3, 1fr);
