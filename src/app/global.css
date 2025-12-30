@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr;
 
   gap: 4rem;
+  position: relative;
 }
 
 .profile__section {
@@ -257,4 +258,95 @@ h1, h2, h3, h4, h5, h6 {
 }
 .time__activity--self-care::after {
   content: url('../app/assets/images/icon-self-care.svg');
+}
+/* Desktop - Laptop */
+@media (min-width: 62rem) {
+  .time__dashboard,
+  .time__body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 0.15fr);
+    max-width: 59.375rem;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .time__dashboard {
+    padding: 21vh 1.5rem;
+  }
+
+  .time__body {
+    top: 2rem;
+  }
+
+  .profile__section {
+    display: grid;
+    width: 12.5rem;
+  }
+
+  .profile__wrapper{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile__timeframe {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-left: 1.5rem;
+    gap: 1rem;
+  }
+
+  .time__activity {
+    width: 12.5rem;
+  }
+
+  .time__activity--exercise,
+  .time__activity--social,
+  .time__activity--self-care {
+    top: 1.5rem;
+  }
+
+  .time__activity--work::before,
+  .time__activity--play::before,
+  .time__activity--study::before,
+  .time__activity--exercise::before,
+  .time__activity--social::before,
+  .time__activity--self-care::before {
+    
+    height: 4.375rem;
+    top: -2rem;
+  }
+
+  .time__activity--work::after,
+  .time__activity--play::after,
+  .time__activity--study::after,
+  .time__activity--exercise::after,
+  .time__activity--social::after,
+  .time__activity--self-care::after {
+    top: -2rem;
+  }
+
+  .time__activity-info {
+    flex-direction: column;
+    align-items:  flex-start;
+
+    top: 0.5rem;
+    position: relative;
+  }
+
+  .time__activity-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .time__activity-hours {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .time__activity-previous {
+    margin-top: 0.25rem;
+  }
+
 }
