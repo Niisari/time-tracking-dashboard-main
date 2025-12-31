@@ -271,6 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 .time__activity--self-care::after {
   content: url('../docs/assets/images/icon-self-care.svg');
 }
+
 /* Desktop - Laptop */
 @media (min-width: 62rem) {
   body {
