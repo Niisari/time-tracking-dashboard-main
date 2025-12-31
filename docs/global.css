@@ -254,22 +254,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .time__activity--work::after {
-  content: url('../docs/assets/images/icon-work.svg');
+  content: url('./assets/images/icon-work.svg');
 }
 .time__activity--play::after {
-  content: url('../docs/assets/images/icon-play.svg');
+  content: url('./assets/images/icon-play.svg');
 }
 .time__activity--study::after {
-  content: url('../docs/assets/images/icon-study.svg');
+  content: url('./assets/images/icon-study.svg');
 }
 .time__activity--exercise::after {
-  content: url('../docs/assets/images/icon-exercise.svg');
+  content: url('./assets/images/icon-exercise.svg');
 }
 .time__activity--social::after {
-  content: url('../docs/assets/images/icon-social.svg');
+  content: url('./assets/images/icon-social.svg');
 }
 .time__activity--self-care::after {
-  content: url('../docs/assets/images/icon-self-care.svg');
+  content: url('./assets/images/icon-self-care.svg');
 }
 
 /* Desktop - Laptop */
